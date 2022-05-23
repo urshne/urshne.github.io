@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title>Document</title>
+
+
+
+
+    <script>
+
+
+        function volumeBalok(){
+
+
+            inputPanjang = document.getElementById("panjang").value;
+
+
+            inputlebar = document.getElementById("lebar").value;
+
+
+            inputTinggi = document.getElementById("tinggi").value;
+
+
+            Hasil = inputPanjang * inputlebar * inputTinggi;
+
+
+            document.getElementById("hasil").innerHTML = Hasil + " m2";
+
+
+            // console.log(Hasil);
+
+
+        }
+
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+
+    <h3>APLIKASI SEDERHANA MENGHITUNG VOLUME BALOK</h3>
+
+
+    <p>Silahkan input Panjang,Lebar dan Tinggi pada inputan yang telah disediakan, Lalu tekan tombol proses</p>
+
+
+    <input id="panjang" placeholder="Masukkan Panjang"> <br><br>
+
+
+    <input id="lebar" placeholder="Masukkan Lebar"> <br> <br>
+
+
+    <input id="tinggi" placeholder="Masukkan tinggi"> <br> <br>
+
+
+    <button type="button" onclick="volumeBalok()">Proses</button> <br> <br>
+
+
+    <p>Volume Balok Tersebut adalah = <h2 id="hasil">
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Phytagoras</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          container: {
+            center: true,
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box !important;
+    }
+  </style>
+</head>
+
+<body class="bg-amber-500">
+  <div class="container px-4 py-12">
+    <div class="grid grid-cols-4 gap-4 text-black">
+      <div
+        class="bg-white col-span-4 py-8 px-4 rounded flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+        <h1 class="font-bold text-2xl uppercase tracking-wider">Hitung Kubus</h1>
+      </div>
+      <div class="bg-white lg:col-span-3 md:col-span-2 col-span-4 py-8 px-4 rounded">
+        <form id="formKubus" autocomplete="off">
+          <div class="flex flex-col space-y-3">
+            <div class="w-full">
+              <label for="" class="mb-2 inline-block">Sisi (cm)</label>
+              <input type="text" id="inputSisi"
+                class="w-full border border-amber-500 px-1 py-1 rounded focus:outline-0 focus:ring focus:ring-sky-100 disabled:bg-gray-200 transition"
+                value="0">
+            </div>
+            <button type="submit"
+              class="bg-amber-500 py-2 px-3 text-white mt-3 rounded transition hover:scale-110 self-end">Hitung</button>
+          </div>
+        </form>
+      </div>
+      <div class="bg-white md:col-span-2 lg:col-span-1 col-span-4 py-8 px-4 rounded">
+        <h1 class="font-bold text-2xl uppercase tracking-wider mb-3">Hasil</h1>
+        <div class="flex">
+          <p id="textLuas">Luas =</p>
+          <p id="resultLuas" class="ml-1">0</p>
+        </div>
+        <div class="flex">
+          <p id="textVolume">Volume =</p>
+          <p id="resultVolume" class="ml-1">0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <body class="bg-amber-500">
+    <div class="container px-4 py-12">
+      <div class="grid grid-cols-4 gap-4 text-black">
+        <div
+          class="bg-white col-span-4 py-8 px-4 rounded flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+          <h1 class="font-bold text-2xl uppercase tracking-wider">Hitung Balok</h1>
+        </div>
+        <div class="bg-white lg:col-span-3 md:col-span-2 col-span-4 py-8 px-4 rounded">
+          <form id="formBalok" autocomplete="off">
+            <div class="flex flex-col space-y-3">
+              <div class="w-full">
+                <label for="" class="mb-2 inline-block">Panjang</label>
+                <input type="text" id="inputPanjang"
+                  class="w-full border border-amber-500 px-1 py-1 rounded focus:outline-0 focus:ring focus:ring-sky-100 disabled:bg-gray-200 transition"
+                  value="0">
+              </div>
+              <div class="w-full">
+                <label for="" class="mb-2 inline-block">Lebar</label>
+                <input type="text" id="inputLebar"
+                  class="w-full border border-amber-500 px-1 py-1 rounded focus:outline-0 focus:ring focus:ring-sky-100 disabled:bg-gray-200 transition"
+                  value="0">
+              </div>
+              <div class="w-full">
+                <label for="" class="mb-2 inline-block">Tinggi</label>
+                <input type="text" id="inputTinggi"
+                  class="w-full border border-amber-500 px-1 py-1 rounded focus:outline-0 focus:ring focus:ring-sky-100 disabled:bg-gray-200 transition"
+                  value="0">
+              </div>
+              <button type="submit"
+                class="bg-amber-500 py-2 px-3 text-white mt-3 rounded transition hover:scale-110 self-end">Hitung</button>
+            </div>
+          </form>
+        </div>
+        <div class="bg-white md:col-span-2 lg:col-span-1 col-span-4 py-8 px-4 rounded">
+          <h1 class="font-bold text-2xl uppercase tracking-wider mb-3">Hasil</h1>
+          <div class="flex">
+            <p id="textLuasBalok">Luas =</p>
+            <p id="resultLuasBalok" class="ml-1">0</p>
+          </div>
+          <div class="flex">
+            <p id="textVolumeBalok">Volume =</p>
+            <p id="resultVolumeBalok" class="ml-1">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <body class="bg-amber-500">
+        <div class="container px-4 py-12">
+          <div class="grid grid-cols-4 gap-4 text-black">
+            <div
+              class="bg-white col-span-4 py-8 px-4 rounded flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+              <h1 class="font-bold text-2xl uppercase tracking-wider">Profile</h1>
+              <div class="bg-white lg:col-span-3 md:col-span-2 col-span-4 py-8 px-4 rounded">
+                <form id="formBalok" autocomplete="off">
+                  <div class="flex flex-col space-y-3">
+                    <div class="w-full">
+                      <label for="" class="mb-2 inline-block">M Firdan Fadillah Ramdani - XII RPL 2</label>
+            </div>
+           
+          </div>
+        </div>
+
+  <script>
+    const inputSisi = document.querySelector('#inputSisi');
+    const inputPanjang = document.querySelector('#inputPanjang');
+    const inputLebar = document.querySelector('#inputLebar');
+    const inputTinggi = document.querySelector('#inputTinggi');
+    const resultLuas = document.querySelector('#resultLuas');
+    const resultLuasBalok = document.querySelector('#resultLuasBalok');
+    const resultVolume = document.querySelector('#resultVolume');
+    const resultVolumeBalok = document.querySelector('#resultVolumeBalok');
+    const formKubus = document.querySelector('#formKubus');
+    const formBalok = document.querySelector('#formBalok');
+
+    inputSisi.addEventListener('keypress', function (e) {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+      }
+      if (e.keyCode < 48 || e.keyCode > 57) {
+        e.preventDefault();
+      }
+    });
+
+    inputPanjang.addEventListener('keypress', function (e) {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+      }
+      if (e.keyCode < 48 || e.keyCode > 57) {
+        e.preventDefault();
+      }
+    });
+
+    inputLebar.addEventListener('keypress', function (e) {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+      }
+      if (e.keyCode < 48 || e.keyCode > 57) {
+        e.preventDefault();
+      }
+    });
+
+    const reset = () => {
+      inputSisi.value = 0;
+      resultPhy.innerHTML = '0';
+    }
+
+    formKubus.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let sisi = parseInt(inputSisi.value);
+
+      if (sisi > 0) {
+        let luas = sisi * sisi * 6;
+        let volume = sisi * sisi * sisi;
+
+        resultLuas.innerHTML = luas;
+        resultVolume.innerHTML = volume;
+        }
+    })
+
+    formBalok.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let panjang = parseInt(inputPanjang.value);
+        let lebar = parseInt(inputLebar.value);
+        let tinggi = parseInt(inputTinggi.value);
+
+        if (panjang > 0 && lebar > 0 && tinggi > 0) {
+            let vbalok = panjang*lebar*tinggi;
+            let lbalok = 2 * (panjang*lebar + panjang*tinggi + lebar*tinggi);
+            resultLuasBalok.innerHTML = lbalok;
+            resultVolumeBalok.innerHTML = vbalok;
+        }
+    })
+  </script>
+</body>
+
+</html>
